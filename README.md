@@ -1,4 +1,4 @@
-<img width="1322" alt="Anik Hossain Banner" src="https://github.com/user-attachments/assets/a8c0a70b-ab5f-47da-88af-72f52ceb48cd" />
+<img width="1322" alt="Anik Hossain Banner" src="https://i.ibb.co.com/Kx4zjG8R/github-banner.png" />
 
 <h1 align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=1000&color=00F7FF&center=true&vCenter=true&width=650&lines=Hi+%F0%9F%91%8B+I'm+Anik+Hossain;MERN+Stack+Developer;React+%7C+Next.js+%7C+Node.js+%7C+MongoDB;Building+Modern+Web+Applications" alt="Typing SVG" />
