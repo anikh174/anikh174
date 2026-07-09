@@ -8,13 +8,13 @@
 
 <p align="center">
   <a href="https://anikportfolio-lac.vercel.app">
-    <img src="https://img.shields.io/badge/Portfolio-Visit-success?style=for-the-badge&logo=vercel" alt="Portfolio" />
+    <img src="https://img.shields.io/badge/Portfolio-Visit-success?style=for-the-badge&logo=vercel" alt="Portfolio"/>
   </a>
   <a href="https://www.linkedin.com/in/anik-hossain-5bb73b273/">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn"/>
   </a>
   <a href="mailto:hossainanik@gmail.com">
-    <img src="https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail" alt="Email" />
+    <img src="https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail" alt="Email"/>
   </a>
 </p>
 
@@ -22,13 +22,22 @@
 
 # 👨‍💻 About Me
 
-I'm **Anik Hossain**, a passionate **MERN Stack Developer** from **Bangladesh**.
+I'm **Anik Hossain**, a passionate **MERN Stack Developer** from **Bangladesh**. I enjoy building modern, responsive, and scalable web applications using the MERN stack. I'm continuously learning new technologies and always looking for opportunities to improve my development skills.
 
 - 💻 MERN Stack Developer
-- 🌱 Currently learning **Advanced MERN & Next.js**
 - 🚀 Building responsive full-stack web applications
-- 📚 Solving problems on LeetCode
-- 🤝 Open to internship and junior developer opportunities
+- 🌱 Currently exploring **Next.js** and advanced MERN concepts
+- 📚 Solving problems on **LeetCode**
+- 🤝 Open to Internship & Junior Developer opportunities
+
+---
+
+# 🔭 Current Activities
+
+- 🌱 Exploring **Next.js** and advanced MERN concepts
+- 🩺 Working on a **Doctor Appointment Booking Platform**
+- 🎫 Developing a **Role-Based Ticket Booking Platform**
+- 🎓 Improving full-stack development and problem-solving skills
 
 ---
 
@@ -49,7 +58,7 @@ I'm **Anik Hossain**, a passionate **MERN Stack Developer** from **Bangladesh**.
 ### Tools
 
 <p>
-  <img src="https://skillicons.dev/icons?i=git,github,vscode,vercel" />
+  <img src="https://skillicons.dev/icons?i=git,github,vscode,vercel,postman" />
 </p>
 
 ---
@@ -76,7 +85,19 @@ Role-Based Ticket Booking Platform with Stripe Payment
 
 ---
 
+## 🎓 SkillSphere
+
+Online Learning Platform
+
+**Tech:** React • Node.js • Express.js • MongoDB • Firebase
+
+🔗 https://skillsphere-flame.vercel.app
+
+---
+
 ## 🌐 Portfolio
+
+Personal Developer Portfolio
 
 🔗 https://anikportfolio-lac.vercel.app
 
@@ -93,6 +114,10 @@ Role-Based Ticket Booking Platform with Stripe Payment
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=anikh174&theme=tokyonight" />
 </p>
 
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=anikh174&label=Profile%20Views&color=0e75b6&style=flat" />
+</p>
+
 ---
 
 # 🌱 Currently Learning
@@ -107,19 +132,20 @@ Role-Based Ticket Booking Platform with Stripe Payment
 
 # 📫 Connect With Me
 
-- 🌍 Portfolio: https://anikportfolio-lac.vercel.app
-- 💼 LinkedIn: https://www.linkedin.com/in/anik-hossain-5bb73b273/
-- 💻 GitHub: https://github.com/anikh174
-- 📧 Email: hossainanik@gmail.com
+- 📞 **Phone:** +8801518953763
+- 📧 **Email:** hossainanik@gmail.com
+- 🌍 **Portfolio:** https://anikportfolio-lac.vercel.app
+- 💼 **LinkedIn:** https://www.linkedin.com/in/anik-hossain-5bb73b273/
+- 💻 **GitHub:** https://github.com/anikh174
 
 ---
 
 # ⚡ Fun Fact
 
-> I enjoy turning ideas into modern, scalable, and user-friendly web applications.
+> I enjoy turning ideas into modern, scalable, and user-friendly web applications while continuously learning new technologies.
 
 ---
 
 <p align="center">
-⭐ Thanks for visiting my GitHub Profile! 🚀
+  ⭐ Thanks for visiting my GitHub Profile! Let's build something amazing together 🚀
 </p>
