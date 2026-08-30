@@ -101,7 +101,7 @@ Pet Adoption & Care Platform connecting people with pets in need of loving homes
 
 **Tech:** Next.js • TypeScript • Tailwind CSS • MongoDB • Better Auth • Recharts
 
-🔗 Your Paws & Claws Live Link
+🔗 https://paws-claws-beta.vercel.app
 
 ---
 
