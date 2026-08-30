@@ -24,20 +24,20 @@
 
 I'm **Anik Hossain**, a passionate **MERN Stack Developer** from **Bangladesh**. I enjoy building modern, responsive, and scalable web applications using the MERN stack. I'm continuously learning new technologies and always looking for opportunities to improve my development skills.
 
-- 💻 MERN Stack Developer
-- 🚀 Building responsive full-stack web applications
-- 🌱 Currently exploring **Next.js** and advanced MERN concepts
-- 📚 Solving problems on **LeetCode**
-- 🤝 Open to Internship & Junior Developer opportunities
+* 💻 MERN Stack Developer
+* 🚀 Building responsive full-stack web applications
+* 🌱 Currently exploring **Next.js** and advanced MERN concepts
+* 📚 Solving problems on **LeetCode**
+* 🤝 Open to Internship & Junior Developer opportunities
 
 ---
 
 # 🔭 Current Activities
 
-- 🌱 Exploring **Next.js** and advanced MERN concepts
-- 🩺 Working on a **Doctor Appointment Booking Platform**
-- 🎫 Developing a **Role-Based Ticket Booking Platform**
-- 🎓 Improving full-stack development and problem-solving skills
+* 🌱 Exploring **Next.js** and advanced MERN concepts
+* 🩺 Working on a **Doctor Appointment Booking Platform**
+* 🎫 Developing a **Role-Based Ticket Booking Platform**
+* 🎓 Improving full-stack development and problem-solving skills
 
 ---
 
@@ -65,16 +65,6 @@ I'm **Anik Hossain**, a passionate **MERN Stack Developer** from **Bangladesh**.
 
 # 🚀 Featured Projects
 
-## 🩺 Doc-Appoint
-
-Doctor Appointment Booking Platform
-
-**Tech:** Next.js • React • Node.js • Express.js • MongoDB • JWT
-
-🔗 https://doc-appoint.vercel.app
-
----
-
 ## 🎫 TicketBari
 
 Role-Based Ticket Booking Platform with Stripe Payment
@@ -85,13 +75,43 @@ Role-Based Ticket Booking Platform with Stripe Payment
 
 ---
 
-## 🎓 SkillSphere
+## 💰 Foundora
 
-Online Learning Platform
+Crowdfunding Platform for launching and supporting creative projects
 
-**Tech:** React • Node.js • Express.js • MongoDB • Firebase
+**Tech:** Next.js • React • Node.js • Express.js • MongoDB • JWT
 
-🔗 https://skillsphere-flame.vercel.app
+🔗 https://foundora-snowy.vercel.app
+
+---
+
+## ✈️ AI Travel Planner
+
+AI-powered travel planning application for creating personalized travel plans and exploring destinations
+
+**Tech:** Next.js • React • Node.js • Express.js • MongoDB • AI
+
+🔗 https://ai-travel-planer-eta.vercel.app
+
+---
+
+## 🐾 Paws & Claws
+
+Pet Adoption & Care Platform connecting people with pets in need of loving homes
+
+**Tech:** Next.js • TypeScript • Tailwind CSS • MongoDB • Better Auth • Recharts
+
+🔗 Your Paws & Claws Live Link
+
+---
+
+## 🩺 Doc-Appoint
+
+Doctor Appointment Booking Platform
+
+**Tech:** Next.js • React • Node.js • Express.js • MongoDB • JWT
+
+🔗 https://doc-appoint.vercel.app
 
 ---
 
@@ -122,21 +142,21 @@ Personal Developer Portfolio
 
 # 🌱 Currently Learning
 
-- Advanced MERN Stack
-- Next.js
-- Authentication & Security
-- Performance Optimization
-- System Design Basics
+* Advanced MERN Stack
+* Next.js
+* Authentication & Security
+* Performance Optimization
+* System Design Basics
 
 ---
 
 # 📫 Connect With Me
 
-- 📞 **Phone:** +8801518953763
-- 📧 **Email:** hossainanik@gmail.com
-- 🌍 **Portfolio:** https://anikportfolio-lac.vercel.app
-- 💼 **LinkedIn:** https://www.linkedin.com/in/anik-hossain-5bb73b273/
-- 💻 **GitHub:** https://github.com/anikh174
+* 📞 **Phone:** +8801518953763
+* 📧 **Email:** [hossainanik@gmail.com](mailto:hossainanik@gmail.com)
+* 🌍 **Portfolio:** https://anikportfolio-lac.vercel.app
+* 💼 **LinkedIn:** https://www.linkedin.com/in/anik-hossain-5bb73b273/
+* 💻 **GitHub:** https://github.com/anikh174
 
 ---
 
