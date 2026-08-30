@@ -155,7 +155,7 @@ Personal Developer Portfolio
 * 📞 **Phone:** +8801518953763
 * 📧 **Email:** [hossainanik@gmail.com](mailto:hossainanik@gmail.com)
 * 🌍 **Portfolio:** https://anikportfolio-lac.vercel.app
-* 💼 **LinkedIn:** https://www.linkedin.com/in/anik-hossain-5bb73b273/
+* 💼 **LinkedIn:** https://www.linkedin.com/in/anik-hossain174
 * 💻 **GitHub:** https://github.com/anikh174
 
 ---
