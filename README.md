@@ -63,7 +63,7 @@ I'm particularly interested in building applications with **secure authenticatio
 # 🚀 What I Do
 
 ```text
-Frontend        → React • Next.js • TypeScript • Tailwind CSS
+Frontend        → React • Next.js • TypeScript • JavaScript • Tailwind CSS
 Backend         → Node.js • Express.js • REST APIs
 Database        → MongoDB
 Authentication  → JWT • Better Auth
@@ -279,15 +279,15 @@ I'm continuously improving my development skills and currently focusing on:
 <div align="center">
 
 <img
-src="https://github-readme-stats.vercel.app/api?username=anikh174&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&include_all_commits=true"
-height="180"
-alt="Anik's GitHub Stats"
+  src="https://github-readme-stats.vercel.app/api?username=anikh174&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&include_all_commits=true&cache_seconds=1800"
+  height="180"
+  alt="Anik's GitHub Stats"
 />
 
 <img
-src="https://github-readme-stats.vercel.app/api/top-langs/?username=anikh174&layout=compact&theme=tokyonight&hide_border=true"
-height="180"
-alt="Anik's Top Languages"
+  src="https://github-readme-stats.vercel.app/api/top-langs/?username=anikh174&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=1800"
+  height="180"
+  alt="Anik's Top Languages"
 />
 
 </div>
@@ -299,9 +299,9 @@ alt="Anik's Top Languages"
 <div align="center">
 
 <img
-src="https://github-readme-activity-graph.vercel.app/graph?username=anikh174&theme=tokyo-night&hide_border=true&area=true&custom_title=Anik%27s%20GitHub%20Activity"
-width="100%"
-alt="Anik's GitHub Activity Graph"
+  src="https://github-readme-activity-graph.vercel.app/graph?username=anikh174&theme=tokyo-night&hide_border=true&area=true&custom_title=Anik%27s%20GitHub%20Activity"
+  width="100%"
+  alt="Anik's GitHub Activity Graph"
 />
 
 </div>
