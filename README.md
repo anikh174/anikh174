@@ -313,8 +313,8 @@ alt="Anik's GitHub Activity Graph"
 <div align="center">
 
 <img
-src="https://raw.githubusercontent.com/anikh174/anikh174/output/github-contribution-grid-snake.svg"
-alt="GitHub Contribution Snake"
+  src="https://raw.githubusercontent.com/anikh174/anikh174/gh-pages/github-contribution-grid-snake.svg"
+  alt="Anik's GitHub Contribution Snake"
 />
 
 </div>
