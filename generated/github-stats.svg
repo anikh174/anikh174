@@ -1,1 +1,112 @@
 
+<svg width="900" height="300" viewBox="0 0 900 300"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect width="900" height="300" rx="20"
+fill="#0d1117"/>
+
+<text
+x="40"
+y="50"
+fill="#ffffff"
+font-size="28"
+font-family="Arial"
+font-weight="bold">
+Anik Hossain — GitHub Stats
+</text>
+
+<text
+x="40"
+y="82"
+fill="#8b949e"
+font-size="15"
+font-family="Arial">
+Real GitHub contribution data
+</text>
+
+<!-- Commits -->
+<rect x="40" y="115" width="180" height="120"
+rx="15" fill="#161b22"/>
+
+<text x="60" y="150"
+fill="#58a6ff"
+font-size="15"
+font-family="Arial">
+COMMITS
+</text>
+
+<text x="60" y="195"
+fill="#ffffff"
+font-size="34"
+font-family="Arial"
+font-weight="bold">
+452
+</text>
+
+<!-- Contributions -->
+<rect x="240" y="115" width="180" height="120"
+rx="15" fill="#161b22"/>
+
+<text x="260" y="150"
+fill="#3fb950"
+font-size="15"
+font-family="Arial">
+CONTRIBUTIONS
+</text>
+
+<text x="260" y="195"
+fill="#ffffff"
+font-size="34"
+font-family="Arial"
+font-weight="bold">
+490
+</text>
+
+<!-- Current Streak -->
+<rect x="440" y="115" width="180" height="120"
+rx="15" fill="#161b22"/>
+
+<text x="460" y="150"
+fill="#f0883e"
+font-size="15"
+font-family="Arial">
+CURRENT STREAK
+</text>
+
+<text x="460" y="195"
+fill="#ffffff"
+font-size="34"
+font-family="Arial"
+font-weight="bold">
+3 days
+</text>
+
+<!-- Longest Streak -->
+<rect x="640" y="115" width="220" height="120"
+rx="15" fill="#161b22"/>
+
+<text x="660" y="150"
+fill="#bc8cff"
+font-size="15"
+font-family="Arial">
+LONGEST STREAK
+</text>
+
+<text x="660" y="195"
+fill="#ffffff"
+font-size="34"
+font-family="Arial"
+font-weight="bold">
+10 days
+</text>
+
+<text
+x="40"
+y="270"
+fill="#8b949e"
+font-size="13"
+font-family="Arial">
+github.com/anikh174
+</text>
+
+</svg>
