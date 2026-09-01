@@ -1,0 +1,51 @@
+name: Generate GitHub Stats
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate GitHub Stats
+        uses: anuraghazra/github-readme-stats@master
+        with:
+          username: anikh174
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate custom stats
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p generated
+
+          curl \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d '{"query":"query { viewer { login } }"}' \
+            https://api.github.com/graphql
+
+      - name: Deploy to gh-pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git checkout --orphan gh-pages
+          git rm -rf . || true
+
+          mkdir -p stats
+
+          echo "GitHub stats generated successfully." > stats/status.txt
+
+          git add .
+          git commit -m "Update GitHub stats"
+          git push origin gh-pages --force
