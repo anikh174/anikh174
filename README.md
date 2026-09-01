@@ -279,15 +279,9 @@ I'm continuously improving my development skills and currently focusing on:
 <div align="center">
 
 <img
-  src="https://github-readme-stats.vercel.app/api?username=anikh174&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&include_all_commits=true&cache_seconds=1800"
-  height="180"
-  alt="Anik's GitHub Stats"
-/>
-
-<img
-  src="https://github-readme-stats.vercel.app/api/top-langs/?username=anikh174&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=1800"
-  height="180"
-  alt="Anik's Top Languages"
+  src="https://raw.githubusercontent.com/anikh174/anikh174/main/generated/github-stats.svg"
+  width="100%"
+  alt="Anik Hossain GitHub Stats"
 />
 
 </div>
