@@ -278,11 +278,7 @@ I'm continuously improving my development skills and currently focusing on:
 
 <div align="center">
 
-<img
-  src="https://raw.githubusercontent.com/anikh174/anikh174/main/generated/github-stats.svg"
-  width="100%"
-  alt="Anik Hossain GitHub Stats"
-/>
+<img src="https://raw.githubusercontent.com/anikh174/anikh174/main/generated/github-stats.svg" width="100%" alt="Anik Hossain GitHub Stats" />
 
 </div>
 
@@ -292,11 +288,7 @@ I'm continuously improving my development skills and currently focusing on:
 
 <div align="center">
 
-<img
-  src="https://github-readme-activity-graph.vercel.app/graph?username=anikh174&theme=tokyo-night&hide_border=true&area=true&custom_title=Anik%27s%20GitHub%20Activity"
-  width="100%"
-  alt="Anik's GitHub Activity Graph"
-/>
+<img src="https://raw.githubusercontent.com/anikh174/anikh174/main/generated/github-activity.svg" width="100%" alt="Anik Hossain GitHub Activity" />
 
 </div>
 
