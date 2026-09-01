@@ -278,7 +278,11 @@ I'm continuously improving my development skills and currently focusing on:
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/anikh174/anikh174/main/generated/github-stats.svg" width="100%" alt="Anik Hossain GitHub Stats" />
+<img
+  src="https://raw.githubusercontent.com/anikh174/anikh174/main/generated/github-stats.svg"
+  width="100%"
+  alt="Anik Hossain GitHub Stats"
+/>
 
 </div>
 
@@ -288,7 +292,11 @@ I'm continuously improving my development skills and currently focusing on:
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/anikh174/anikh174/main/generated/github-activity.svg" width="100%" alt="Anik Hossain GitHub Activity" />
+<img
+  src="https://raw.githubusercontent.com/anikh174/anikh174/main/generated/github-activity.svg"
+  width="100%"
+  alt="Anik Hossain GitHub Activity"
+/>
 
 </div>
 
