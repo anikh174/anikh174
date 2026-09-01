@@ -1,9 +1,5 @@
 {
-  "name": "anik-github-profile",
+  "name": "anik-github-stats",
   "version": "1.0.0",
-  "private": true,
-  "description": "Anik Hossain GitHub Profile",
-  "scripts": {
-    "generate-stats": "node scripts/github-stats.js"
-  }
+  "private": true
 }
