@@ -1,277 +1,213 @@
 const fs = require("fs");
 
 const username = "anikh174";
+const token = process.env.GITHUB_TOKEN;
 
-async function github(query) {
-  const response = await fetch("https://api.github.com/graphql", {
-    method: "POST",
+async function githubAPI(endpoint) {
+  const response = await fetch(`https://api.github.com${endpoint}`, {
     headers: {
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
     },
-    body: JSON.stringify({
-      query,
-      variables: { username },
-    }),
   });
 
-  const result = await response.json();
-
-  if (result.errors) {
-    console.error(result.errors);
-    process.exit(1);
+  if (!response.ok) {
+    throw new Error(`GitHub API Error: ${response.status}`);
   }
 
-  return result.data;
+  return response.json();
 }
 
-function calculateStreak(contributions) {
-  const days = contributions
-    .filter((day) => day.contributionCount > 0)
-    .map((day) => day.date)
-    .sort();
-
-  if (!days.length) {
-    return {
-      current: 0,
-      longest: 0,
-    };
-  }
-
-  let longest = 1;
-  let current = 1;
-
-  for (let i = 1; i < days.length; i++) {
-    const previous = new Date(days[i - 1]);
-    const currentDate = new Date(days[i]);
-
-    const diff =
-      (currentDate - previous) / (1000 * 60 * 60 * 24);
-
-    if (diff === 1) {
-      current++;
-      longest = Math.max(longest, current);
-    } else {
-      current = 1;
-    }
-  }
-
-  const today = new Date().toISOString().split("T")[0];
-
-  let currentStreak = 0;
-
-  for (let i = days.length - 1; i >= 0; i--) {
-    if (i === days.length - 1) {
-      const lastDate = new Date(days[i]);
-      const todayDate = new Date(today);
-
-      const diff =
-        (todayDate - lastDate) / (1000 * 60 * 60 * 24);
-
-      if (diff > 1) break;
-    }
-
-    if (
-      i === days.length - 1 ||
-      new Date(days[i + 1]) - new Date(days[i]) ===
-        1000 * 60 * 60 * 24
-    ) {
-      currentStreak++;
-    } else {
-      break;
-    }
-  }
-
-  return {
-    current: currentStreak,
-    longest,
-  };
+function escapeXML(text) {
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
 }
 
-function createSvg(stats) {
+function createStatsSVG(stats) {
   return `
-<svg width="900" height="300" viewBox="0 0 900 300"
-xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
+  <rect width="900" height="320" rx="20" fill="#0d1117"/>
 
-<rect width="900" height="300" rx="20"
-fill="#0d1117"/>
+  <text x="50" y="55"
+    font-family="Arial, sans-serif"
+    font-size="28"
+    font-weight="bold"
+    fill="#ffffff">
+    Anik Hossain — GitHub Stats
+  </text>
 
-<text
-x="40"
-y="50"
-fill="#ffffff"
-font-size="28"
-font-family="Arial"
-font-weight="bold">
-Anik Hossain — GitHub Stats
-</text>
+  <text x="50" y="105"
+    font-family="Arial, sans-serif"
+    font-size="17"
+    fill="#8b949e">
+    Public Repositories
+  </text>
 
-<text
-x="40"
-y="82"
-fill="#8b949e"
-font-size="15"
-font-family="Arial">
-Real GitHub contribution data
-</text>
+  <text x="50" y="145"
+    font-family="Arial, sans-serif"
+    font-size="34"
+    font-weight="bold"
+    fill="#00f7ff">
+    ${stats.repos}
+  </text>
 
-<!-- Commits -->
-<rect x="40" y="115" width="180" height="120"
-rx="15" fill="#161b22"/>
+  <text x="330" y="105"
+    font-family="Arial, sans-serif"
+    font-size="17"
+    fill="#8b949e">
+    Followers
+  </text>
 
-<text x="60" y="150"
-fill="#58a6ff"
-font-size="15"
-font-family="Arial">
-COMMITS
-</text>
+  <text x="330" y="145"
+    font-family="Arial, sans-serif"
+    font-size="34"
+    font-weight="bold"
+    fill="#00f7ff">
+    ${stats.followers}
+  </text>
 
-<text x="60" y="195"
-fill="#ffffff"
-font-size="34"
-font-family="Arial"
-font-weight="bold">
-${stats.commits}
-</text>
+  <text x="610" y="105"
+    font-family="Arial, sans-serif"
+    font-size="17"
+    fill="#8b949e">
+    Following
+  </text>
 
-<!-- Contributions -->
-<rect x="240" y="115" width="180" height="120"
-rx="15" fill="#161b22"/>
+  <text x="610" y="145"
+    font-family="Arial, sans-serif"
+    font-size="34"
+    font-weight="bold"
+    fill="#00f7ff">
+    ${stats.following}
+  </text>
 
-<text x="260" y="150"
-fill="#3fb950"
-font-size="15"
-font-family="Arial">
-CONTRIBUTIONS
-</text>
+  <line x1="50" y1="190" x2="850" y2="190"
+    stroke="#30363d"
+    stroke-width="1"/>
 
-<text x="260" y="195"
-fill="#ffffff"
-font-size="34"
-font-family="Arial"
-font-weight="bold">
-${stats.contributions}
-</text>
+  <text x="50" y="235"
+    font-family="Arial, sans-serif"
+    font-size="17"
+    fill="#8b949e">
+    GitHub Profile
+  </text>
 
-<!-- Current Streak -->
-<rect x="440" y="115" width="180" height="120"
-rx="15" fill="#161b22"/>
+  <text x="50" y="275"
+    font-family="Arial, sans-serif"
+    font-size="22"
+    fill="#ffffff">
+    github.com/${escapeXML(username)}
+  </text>
 
-<text x="460" y="150"
-fill="#f0883e"
-font-size="15"
-font-family="Arial">
-CURRENT STREAK
-</text>
+  <text x="850" y="275"
+    text-anchor="end"
+    font-family="Arial, sans-serif"
+    font-size="16"
+    fill="#00f7ff">
+    MERN Stack Developer
+  </text>
+</svg>
+`;
+}
 
-<text x="460" y="195"
-fill="#ffffff"
-font-size="34"
-font-family="Arial"
-font-weight="bold">
-${stats.currentStreak} days
-</text>
+async function createActivitySVG() {
+  const events = await githubAPI(`/users/${username}/events/public?per_page=10`);
 
-<!-- Longest Streak -->
-<rect x="640" y="115" width="220" height="120"
-rx="15" fill="#161b22"/>
+  const recentEvents = events.slice(0, 6);
 
-<text x="660" y="150"
-fill="#bc8cff"
-font-size="15"
-font-family="Arial">
-LONGEST STREAK
-</text>
+  let rows = "";
 
-<text x="660" y="195"
-fill="#ffffff"
-font-size="34"
-font-family="Arial"
-font-weight="bold">
-${stats.longestStreak} days
-</text>
+  recentEvents.forEach((event, index) => {
+    let action = "GitHub Activity";
+    let repo = event.repo?.name || "Unknown repository";
 
-<text
-x="40"
-y="270"
-fill="#8b949e"
-font-size="13"
-font-family="Arial">
-github.com/${username}
-</text>
+    if (event.type === "PushEvent") {
+      action = "Pushed code";
+    } else if (event.type === "PullRequestEvent") {
+      action = "Pull request activity";
+    } else if (event.type === "IssuesEvent") {
+      action = "Issue activity";
+    } else if (event.type === "CreateEvent") {
+      action = "Created repository/branch";
+    } else if (event.type === "WatchEvent") {
+      action = "Starred repository";
+    } else if (event.type === "ForkEvent") {
+      action = "Forked repository";
+    }
 
+    const y = 70 + index * 42;
+
+    rows += `
+      <circle cx="35" cy="${y - 6}" r="5" fill="#00f7ff"/>
+
+      <text x="55" y="${y}"
+        font-family="Arial, sans-serif"
+        font-size="15"
+        fill="#ffffff">
+        ${escapeXML(action)}
+      </text>
+
+      <text x="55" y="${y + 20}"
+        font-family="Arial, sans-serif"
+        font-size="12"
+        fill="#8b949e">
+        ${escapeXML(repo)}
+      </text>
+    `;
+  });
+
+  return `
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="350" viewBox="0 0 900 350">
+  <rect width="900" height="350" rx="20" fill="#0d1117"/>
+
+  <text x="35" y="35"
+    font-family="Arial, sans-serif"
+    font-size="24"
+    font-weight="bold"
+    fill="#ffffff">
+    📈 Recent GitHub Activity
+  </text>
+
+  ${rows}
 </svg>
 `;
 }
 
 async function main() {
-  const query = `
-    query($username: String!) {
-      user(login: $username) {
+  try {
+    console.log("Fetching GitHub profile...");
 
-        contributionsCollection {
-          totalCommitContributions
-          totalIssueContributions
-          totalPullRequestContributions
-          totalRepositoryContributions
+    const profile = await githubAPI(`/users/${username}`);
 
-          contributionCalendar {
-            totalContributions
+    const stats = {
+      repos: profile.public_repos,
+      followers: profile.followers,
+      following: profile.following,
+    };
 
-            weeks {
-              contributionDays {
-                date
-                contributionCount
-              }
-            }
-          }
-        }
+    fs.mkdirSync("generated", { recursive: true });
 
-        repositories(ownerAffiliations: OWNER, first: 100) {
-          totalCount
-        }
-      }
-    }
-  `;
+    fs.writeFileSync(
+      "generated/github-stats.svg",
+      createStatsSVG(stats)
+    );
 
-  const data = await github(query);
+    fs.writeFileSync(
+      "generated/github-activity.svg",
+      await createActivitySVG()
+    );
 
-  const collection = data.user.contributionsCollection;
-
-  const contributions = collection.contributionCalendar.weeks.flatMap(
-    (week) => week.contributionDays
-  );
-
-  const streak = calculateStreak(contributions);
-
-  const stats = {
-    commits: collection.totalCommitContributions,
-    contributions:
-      collection.contributionCalendar.totalContributions,
-    issues: collection.totalIssueContributions,
-    pullRequests:
-      collection.totalPullRequestContributions,
-    repositories:
-      data.user.repositories.totalCount,
-    currentStreak: streak.current,
-    longestStreak: streak.longest,
-  };
-
-  console.log(stats);
-
-  fs.mkdirSync("generated", {
-    recursive: true,
-  });
-
-  fs.writeFileSync(
-    "generated/github-stats.svg",
-    createSvg(stats)
-  );
-
-  fs.writeFileSync(
-    "generated/github-stats.json",
-    JSON.stringify(stats, null, 2)
-  );
+    console.log("✅ GitHub stats generated successfully!");
+    console.log("✅ GitHub activity generated successfully!");
+  } catch (error) {
+    console.error("❌ Failed:", error);
+    process.exit(1);
+  }
 }
 
 main();
