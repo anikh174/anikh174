@@ -1,16 +1,20 @@
-name: Update GitHub Stats
+name: Generate GitHub Stats & Activity
 
 on:
-  schedule:
-    - cron: "0 */6 * * *"
-
   workflow_dispatch:
+
+  schedule:
+    - cron: "0 0 * * *"
+
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
 
 jobs:
-  stats:
+  generate:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,20 +26,18 @@ jobs:
         with:
           node-version: 20
 
-      - name: Generate GitHub Stats
+      - name: Generate GitHub Stats & Activity
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          node scripts/github-stats.js
+        run: node scripts/github-stats.js
 
-      - name: Deploy generated stats
+      - name: Commit generated files
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add generated/
 
-          git diff --cached --quiet || \
-            git commit -m "chore: update GitHub stats"
+          git diff --cached --quiet || git commit -m "chore: update GitHub stats and activity"
 
           git push
