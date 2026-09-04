@@ -17,14 +17,14 @@
         font-family="Arial, sans-serif"
         font-size="15"
         fill="#ffffff">
-        Pushed code
+        Created repository/branch
       </text>
 
       <text x="55" y="90"
         font-family="Arial, sans-serif"
         font-size="12"
         fill="#8b949e">
-        anikh174/anikh174
+        anikh174/NextLevel-A-1
       </text>
     
       <circle cx="35" cy="106" r="5" fill="#00f7ff"/>
