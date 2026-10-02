@@ -91,20 +91,4 @@
         anikh174/anikh174
       </text>
     
-      <circle cx="35" cy="274" r="5" fill="#00f7ff"/>
-
-      <text x="55" y="280"
-        font-family="Arial, sans-serif"
-        font-size="15"
-        fill="#ffffff">
-        Pushed code
-      </text>
-
-      <text x="55" y="300"
-        font-family="Arial, sans-serif"
-        font-size="12"
-        fill="#8b949e">
-        anikh174/anikh174
-      </text>
-    
 </svg>
